@@ -27,18 +27,18 @@ from bot.modules.connection import connect_button
 
 
 PM_START_TEXT = """
-*Hello* *{}*
-*My name is* *{}*\n\n`You Can Add any kind of Filters to This Bot!`
+*හෙලෝ 🙂* *{}*
+*My name is* *{}*\n\n`ඔයාට මේ bot ට filters add කරන්න පුළුවන්😉!`
 
-_Click Help button for more details_
+_වැඩි විස්තර සඳහා Help එක click කරන්න 😀_
 """
 
 
 HELP_STRINGS = """
-*Hello My name is* *{}*.
-*Main Available Commands are Below:*
+*හෙලෝ මගේ නම* *{}*.
+*ප්‍රධාන Commands ටික පහල🤭:*
 
-All of the following commands  / can  be used...
+Commands ගහන්න / ඔය ඉරි කෑල්ල use කරන්න හොදේ🤕...
 
 And the following:
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
@@ -172,7 +172,7 @@ def send_start(bot, update):
     first_name = update.effective_user.first_name 
     text = PM_START_TEXT
 
-    keyboard = [[InlineKeyboardButton(text="⚙️Help",callback_data="help_back"),InlineKeyboardButton(text="Master😴",url="https://t.me/D_ar_k_Angel")]]
+    keyboard = [[InlineKeyboardButton(text="⚙️Help",callback_data="help_back"),InlineKeyboardButton(text="Master🤕",url="https://t.me/Sanu_2021ss")]]
     keyboard += [[InlineKeyboardButton(text="♻️Connect Group", callback_data="main_connect"),InlineKeyboardButton(text="Add Me➕",url="t.me/{}?startgroup=true".format(bot.username))]]
 
     update.effective_message.reply_photo(img, PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_ID), 
